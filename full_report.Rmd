@@ -1,0 +1,69 @@
+---
+title: "Full Report on [Name Research Project]"
+author: "Your name here"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+## This code block will load the data and packages that you will need
+## for the project. Click the green "play" button in the upper right to run this
+## code.
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, 
+                      error = FALSE, fig.align = "center", fig.height = 4)
+#load("input/data.RData")
+library(ggplot2)
+library(texreg)
+```
+
+## Introduction
+
+State the research question and why it is important to study in your own words.
+
+## Data
+
+Describe the dataset being used in your own words. Describe the key variables and how they were measured. Show the distributions of these key variables graphically and describe these distributions. You can copy and past the code chunk below to produce figures.
+
+```{r fig.cap="A Caption"}
+#code (e.g. plot, hist, barplot, boxplot) to produce the figure
+```
+
+## Results
+
+Describe the bivariate association between your key variables, using graphs and statistics.
+
+```{r fig.cap="A Caption"}
+#code (e.g. plot, hist, barplot, boxplot) to produce the figure
+```
+
+Describe the results of the full multivariate regression models. You can use the code chunk template below to place the regression results into a nice format using the texreg package. This code chunk is initially set to not run when this document is knitted. Change `eval=FALSE` to `eval=TRUE` to allow it to run. 
+
+```{r, results='asis', eval=FALSE}
+#make some models. You may need more or less than four. 
+model1 <- lm()
+model2 <- lm()
+model3 <- lm()
+model4 <- lm()
+
+#change from screenreg to texreg for knitting
+knitreg(list(model1, model2, model3, model4),
+        caption="A caption",
+        caption.above = TRUE,
+        #Comment out custom.coef.names until your models are ready for knitting
+        #custom.coef.names = c("Intercept",
+        #                       "names",
+        #                      "of",
+        #                       "each",
+        #                       "line",
+        #                       "of",
+        #                       "table"),
+        custom.gof.names = c("R-squared","N"),
+        digits=2,
+        include.adjrs=FALSE, include.rmse=FALSE,
+        custom.note = "%stars. Standard errors in parenthesis.")
+```
+
+A discussion of the results of your table should go here, **not** in conclusions. 
+
+## Conclusions
+
+A paragraph to summarize your report and what you draw from these results regarding your original research question.
