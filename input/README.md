@@ -9,10 +9,10 @@ I have combined these data sources together into our full analytical dataset whi
 * **county**: The name of the county. This is not a variable you will use for the analysis, but helps to identify each county.
 * **county_code**: The numeric id of each county. This is also not a variable you will use for the analysis, but is used to link records across multiple sources.
 * **death_rate**: The number of deaths per 100,000 population from drug overdose in 2020. This is the key dependent variable. This death rate has been "age standardized" so that it is not the actual death rate but the expected death rate applied to a standard age distribution across counties. This removes differences across counties that may result from different death rates by age combined with some county populations being older or younger than others.
-* **metro**: A categorical variable indicating whether the county was part of a metropolitan area or not. Counties that are part of metropolitan areas include both urban and suburban places and large and small cities (e.g. Multnomah county, Washington county, and Lane county in Oregon are metropolitan counties).
+* **metro**: A categorical variable indicating whether the county was part of a metropolitan area or not. Counties that are part of metropolitan areas include both urban and suburban places and large and small cities (e.g. Multnomah county, Washington county, and Lane county in Oregon are metropolitan counties). This is the key contextual variable.
 * **pop_density**: Number of people per square mile.
 * **pct_nonwhite**: Percent of the population that is not white.
 * **dropout_rate**: Percent of the population aged 16-19 that is not currently in school and does not have a high school diploma.
 * **unemp_rate**: Percent of the labor force (those working or seeking work) that is currently unemployed.
 * **pct_frgn_born**: The percent of the population that is foreign born.
-* **poverty_rate**: The percent of the population who live in a household where the household income is below the federally defined poverty line.
+* **poverty_rate**: The percent of the population who live in a household where the household income is below the federally defined poverty line. This is the key independent variable.
