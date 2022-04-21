@@ -1,4 +1,4 @@
-# Putting It All Together Project on [Name of Research Project]
+# Putting It All Together Project on Drug Overdose Death Rates
 
 # Introduction
 
@@ -6,12 +6,12 @@ Throughout the the term, you will be working to build up an analysis of a specif
 
 ## Research Topic: 
 
-Describe research topic
+Using data on US counties from 2020, you will examine the relationship between poverty rates and the rate of death from drug overdoses. You will also examine whether this relationship varies by the metropolitan status of the county.
 
 ### Research questions
 
-1. x related to y
-2. contextual variable
+1. What is the association between a county's poverty rate and the death rate from drug overdose?
+2. Is the association between the poverty rate and overdose death rate different in metropolitan counties than in non-metropolitan (i.e. rural) counties?
 
 ## Technical Details
 
