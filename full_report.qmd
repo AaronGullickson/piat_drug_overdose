@@ -1,0 +1,82 @@
+---
+title: "Full Report on Drug Overdose Rates"
+author: "Your name here"
+format: pdf
+editor: visual
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+## This code block will load the data and packages that you will need
+## for the project. Click the green "play" button in the upper right to run this
+## code.
+load("input/overdose.RData")
+library(ggplot2)
+library(modelsummary)
+```
+
+## Introduction
+
+State the research question and why it is important to study in your own words.
+
+## Data
+
+Describe the dataset being used in your own words. Describe the key variables and how they were measured. Show the distributions of these key variables graphically and describe these distributions. You can copy and past the code chunk below to produce figures.
+
+```{r}
+#| label: fig-a-unique-name
+#| fig-cap: Put a caption here
+
+#code (e.g. plot, hist, barplot, boxplot) to produce the figure
+```
+
+## Results
+
+Describe the bivariate association between your key variables, using graphs and statistics.
+
+```{r fig.cap="A Caption"}
+#| label: fig-put-another-unique-name
+#| fig-cap: Put a caption here
+
+#code (e.g. plot, hist, barplot, boxplot) to produce the figure
+```
+
+Describe the results of the full multivariate regression models. You can use the code chunk template below to place the regression results into a nice format using the texreg package. This code chunk is initially set to not run when this document is rendered. Change `eval: false` to `eval: true` to allow it to run.
+
+```{r}
+#| label: tbl-model-results
+#| tbl-cap: Put a caption here
+
+# IMPORTANT: change eval to true above when you are ready to run
+# this line of code
+
+# make some models. You may need more or less than four. 
+model1 <- lm()
+model2 <- lm()
+model3 <- lm()
+model4 <- lm()
+
+modelsummary(list(model1, model2, model3, model4), 
+             output = "gt",
+             stars = c("*" = 0.05,"**" = 0.01, "***" = 0.001),
+             # Comment out coef_map until you have your models finalized. All 
+             # names on the left must match exact names from coef command. 
+             # Confirm that all variables are showing in  the final table.
+             #coef_map = c("(Intercept)" = "Intercept",
+             #             "Variable_Name" = "Variable Label",
+             #             ...),
+             gof_map = c("nobs", "r.squared"),
+             notes = "Standard errors shown in parenthesis")
+```
+
+A discussion of the results of your table should go here, **not** in conclusions.
+
+## Conclusions
+
+A paragraph to summarize your report and what you draw from these results regarding your original research question.
